@@ -25,7 +25,7 @@ interface MainNavigationProps {
 export function MobileNavigation({ menuItems }: MainNavigationProps) {
   return (
     <div className="lg:hidden">
-      <Sheet>
+      <Sheet modal={false}>
         <SheetTrigger asChild>
           <Button variant="ghost">
             <Icon.menu />
