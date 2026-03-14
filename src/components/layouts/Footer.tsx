@@ -15,10 +15,12 @@ function Footer() {
         </section>
         <section className="grid grid-cols-2 lg:grid-cols-4 lg:gap-20 gap-10">
           {siteConfig.footerNav.map((menu) => (
-            <div>
-              <span className="font-medium">{menu.title}</span>
+            <div key={menu.title}>
+              <span className="font-medium">
+                {menu.title}
+              </span>
               {menu.items.map((item) => (
-                <Link to={item.href} className="">
+                <Link to={item.href} className="" key={item.title}>
                   <div className="font-light"> {item.title} </div>
                 </Link>
               ))}

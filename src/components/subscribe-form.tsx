@@ -11,13 +11,17 @@ import {
   FieldGroup,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { Spinner } from "@/components/ui/spinner";
 import { Icon } from "@/Icons/Icons";
+import { useState } from "react";
 
 const formEmail = z.object({
   email: z.email("Please input invalid email."),
 });
 
 export default function FormForEmail() {
+  const [waitFlag, setWaitFlag] = useState(false);
+
   const form = useForm<z.infer<typeof formEmail>>({
     resolver: zodResolver(formEmail),
     mode: "onSubmit",
@@ -27,13 +31,10 @@ export default function FormForEmail() {
   });
 
   function onSubmit(data: z.infer<typeof formEmail>) {
-    toast("You submitted email successfully.", {
-      description: (
-        <pre className="mt-2 w-[320px] overflow-x-auto rounded-md bg-code p-4 text-code-foreground">
-          Thank You!
-        </pre>
-      ),
+    setWaitFlag(true);
 
+    toast("You submitted email successfully.", {
+      duration: 1000,
       position: "bottom-right",
       classNames: {
         content: "flex flex-col gap-2",
@@ -46,7 +47,7 @@ export default function FormForEmail() {
   }
 
   return (
-    <div className="relative">
+    <div className="relative mr-10 md:mr-5 lg:mr-0">
       <form id="form-rhf-textarea" onSubmit={form.handleSubmit(onSubmit)}>
         <FieldGroup>
           <Controller
@@ -58,8 +59,11 @@ export default function FormForEmail() {
                   <Input
                     className="h-8 w-full pr-10"
                     {...field}
+                    type="email"
                     id={field.name}
                     aria-invalid={fieldState.invalid}
+                    autoComplete="off"
+                    autoCapitalize="off"
                   />
 
                   {fieldState.invalid && (
@@ -78,8 +82,13 @@ export default function FormForEmail() {
         className="top-1 right-1 absolute bg-white h-6 "
         type="submit"
         form="form-rhf-textarea"
+        // onClick={() => setWaitFlag(true)}
       >
-        <Icon.paper_plain className="size-4 c" />
+        {!waitFlag ? (
+          <Icon.paper_plain className="size-4 " />
+        ) : (
+          <Spinner className="size-4 " />
+        )}
       </Button>
     </div>
   );
