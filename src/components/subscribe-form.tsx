@@ -47,7 +47,7 @@ export default function FormForEmail() {
   }
 
   return (
-    <div className="relative mr-10 md:mr-5 lg:mr-0">
+    <div className="relative mr-0 md:mr-5 lg:mr-0">
       <form id="form-rhf-textarea" onSubmit={form.handleSubmit(onSubmit)}>
         <FieldGroup>
           <Controller

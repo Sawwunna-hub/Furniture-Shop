@@ -5,20 +5,18 @@ import FormForEmail from "@/components/subscribe-form";
 
 function Footer() {
   return (
-    <footer className="w-full border-t ml-4 lg:ml-0">
-      <section className="flex flex-col lg:flex-row justify-center item-center gap-10 pt-8 pb-8 ">
+    <footer className="w-full border-t">
+      <section className="container mx-auto flex flex-col lg:flex-row items-center gap-10 pt-8 pb-8 px-4 lg:px-0">
         <section>
           <Link to="/" className="flex space-x-2">
             <Icon.logo />
             <span className="font-bold">{siteConfig.name}</span>
           </Link>
         </section>
-        <section className="grid grid-cols-2 lg:grid-cols-4 lg:gap-20 gap-10">
+        <section className="grid grid-cols-2 lg:grid-cols-4 lg:gap-20 gap-5">
           {siteConfig.footerNav.map((menu) => (
             <div key={menu.title}>
-              <span className="font-medium">
-                {menu.title}
-              </span>
+              <span className="font-medium">{menu.title}</span>
               {menu.items.map((item) => (
                 <Link to={item.href} className="" key={item.title}>
                   <div className="font-light"> {item.title} </div>

@@ -9,7 +9,7 @@ function Header() {
       <nav className="container h-16 flex items-center mx-auto">
         <NavigationMenuMain menuItems={siteConfig.mainNav} />
         <MobileNavigation menuItems={siteConfig.mainNav} />
-        <div className="flex flex-1 justify-end space-x-4 mr-8 items-center">
+        <div className="flex flex-1 justify-end space-x-4 items-center pr-4 lg:pr-8">
           <ModeToggle />
         </div>
       </nav>

@@ -1,5 +1,5 @@
 function Contact() {
-  return <div className="ml-32">Contact</div>;
+  return <div className="container mx-auto p-8">Contact</div>;
 }
 
 export default Contact;
