@@ -1,4 +1,4 @@
-import { HomeIcon } from "@radix-ui/react-icons";
+import { HomeIcon, ExclamationTriangleIcon } from "@radix-ui/react-icons";
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 export const Icon = {
@@ -42,11 +42,12 @@ export const Icon = {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
-      fill="#3452AD"
+      fill="currentColor"
       className="size-5"
       {...props}
     >
       <path d="M3.105 2.288a.75.75 0 0 0-.826.95l1.414 4.926A1.5 1.5 0 0 0 5.135 9.25h6.115a.75.75 0 0 1 0 1.5H5.135a1.5 1.5 0 0 0-1.442 1.086l-1.414 4.926a.75.75 0 0 0 .826.95 28.897 28.897 0 0 0 15.293-7.155.75.75 0 0 0 0-1.114A28.897 28.897 0 0 0 3.105 2.288Z" />
     </svg>
   ),
+  exclamationEror: ExclamationTriangleIcon,
 };

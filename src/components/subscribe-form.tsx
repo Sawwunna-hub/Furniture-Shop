@@ -47,7 +47,7 @@ export default function FormForEmail() {
   }
 
   return (
-    <div className="relative mr-0 md:mr-5 lg:mr-0">
+    <div className="relative  md:mr-5  lg:w-xs w-50 md:w-2xs">
       <form id="form-rhf-textarea" onSubmit={form.handleSubmit(onSubmit)}>
         <FieldGroup>
           <Controller
@@ -78,11 +78,10 @@ export default function FormForEmail() {
 
       <Button
         size="icon"
-        variant="ghost"
-        className="top-1 right-1 absolute bg-white h-6 "
+        //variant="ghost"
+        className="top-1 right-1 absolute  h-6 "
         type="submit"
         form="form-rhf-textarea"
-        // onClick={() => setWaitFlag(true)}
       >
         {!waitFlag ? (
           <Icon.paper_plain className="size-4 " />

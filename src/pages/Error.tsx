@@ -9,15 +9,18 @@ import {
 import { Link } from "react-router";
 import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
+import { Icon } from "@/Icons/Icons";
 
 function Error() {
   return (
-    <div className="flex flex-col min-h-screen w-full">
+    <div className="flex flex-col min-h-screen">
       <Header />
 
       <main className="flex items-center flex-1">
         <Card className=" mx-auto w-full max-w-sm ">
-          <CardHeader>
+          <CardHeader className="text-center">
+            <Icon.exclamationEror className="size-8 justify-self-center text-foreground/50" />
+
             <CardTitle>Opps!</CardTitle>
             <CardDescription>
               Something went wrong! Plese contact to Administrator.

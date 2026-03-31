@@ -6,9 +6,9 @@ import FormForEmail from "@/components/subscribe-form";
 function Footer() {
   return (
     <footer className="w-full border-t">
-      <section className="container mx-auto flex flex-col lg:flex-row items-center gap-10 pt-8 pb-8 px-4 lg:px-0">
+      <section className="container mx-auto flex flex-col lg:justify-between lg:flex-row  gap-10 pt-8 pb-8 px-4 lg:px-0">
         <section>
-          <Link to="/" className="flex space-x-2">
+          <Link to="/" className="flex space-x-2 justify-center">
             <Icon.logo />
             <span className="font-bold">{siteConfig.name}</span>
           </Link>
@@ -26,8 +26,8 @@ function Footer() {
           ))}
         </section>
 
-        <section className="flex flex-col gap-2">
-          <span className="font-medium">Submit Email for latest updates</span>
+        <section className="flex flex-col gap-2 ">
+          <span className="font-medium">Submit Email Updates</span>
           <FormForEmail />
         </section>
       </section>

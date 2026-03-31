@@ -5,7 +5,7 @@ import { ModeToggle } from "@/components/mode-toggle";
 
 function Header() {
   return (
-    <header className="w-full border-b-2">
+    <header className="w-full border-b-2 sticky top-0 z-50 bg-background">
       <nav className="container h-16 flex items-center mx-auto">
         <NavigationMenuMain menuItems={siteConfig.mainNav} />
         <MobileNavigation menuItems={siteConfig.mainNav} />
