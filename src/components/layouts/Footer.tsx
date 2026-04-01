@@ -5,7 +5,7 @@ import FormForEmail from "@/components/subscribe-form";
 
 function Footer() {
   return (
-    <footer className="w-full border-t">
+    <footer className="w-full border-t overflow-x-hidden">
       <section className="container mx-auto flex flex-col lg:justify-between lg:flex-row  gap-10 pt-8 pb-8 px-4 lg:px-0">
         <section>
           <Link to="/" className="flex space-x-2 justify-center">

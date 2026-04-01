@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/sonner";
 
 function RootLayout() {
   return (
-    <div className="flex flex-col min-h-screen ">
+    <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-1">
         <Outlet />
