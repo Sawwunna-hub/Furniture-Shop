@@ -5,12 +5,12 @@ import couch from "@/data/images/couch.png";
 function Home() {
   return (
     <div className="flex flex-col mt-1 lg:mt-0 justify-center">
-      <div className="flex flex-col lg:flex-row items-center justify-center text-center lg:text-left">
+      <div className="flex flex-col lg:flex-row items-center justify-center text-center lg:text-left overflow-hidden">
         <div className="space-y-5 lg:space-y-10 lg:ml-6 ">
-          <h1 className="text-5xl font-extrabold text-emerald-900 ">
+          <h1 className="text-5xl font-extrabold color-green-cus">
             Modern Interior Design Studio
           </h1>
-          <p className="text-muted-foreground">
+          <p className="color-green-cus">
             Furniture is an essential component of any living space, providing
             functionality, comfort and aesthetic appeal.
           </p>
@@ -24,7 +24,7 @@ function Home() {
             </Button>
             <Button
               variant="ghostcustom"
-              className="bg-white hover:bg-black/20 hover:shadow-lg text-black"
+              className="bg-white hover:bg-black/20 hover:shadow-lg color-green-cus"
             >
               <Link to="">Explore</Link>
             </Button>

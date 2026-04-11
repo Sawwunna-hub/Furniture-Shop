@@ -133,3 +133,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+@utility color-green-cus {
+  color: #3b5d50;
+}
