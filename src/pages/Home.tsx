@@ -1,6 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router";
 import couch from "@/data/images/couch.png";
+import CarouselCard from "@/components/common/CarouselCard";
+import { products } from "@/data/products";
+import { posts } from "@/data/posts";
+import BLogCard from "@/components/BLogCard";
 
 function Home() {
   return (
@@ -32,6 +36,19 @@ function Home() {
         </div>
 
         <img src={couch} alt="couch" className="size object-contain" />
+      </div>
+
+      <CarouselCard products={products} />
+
+      <div>
+        <div className="flex flex-col md:flex-row ml-8 justify-between mt-12 mr-8">
+          <h3 className="font-bold text-lg">Recent Blog Posts</h3>
+          <Link to="/blogs" className="font-light underline self-end">
+            View more posts
+          </Link>
+        </div>
+
+        <BLogCard posts={posts} />
       </div>
     </div>
   );
